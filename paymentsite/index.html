@@ -29,6 +29,13 @@ Esto es una pagina de pago
 		var url = getPunchoutURL(window.location.href);
 		window.location.href = url;
 	}
+
+	
+	var punchEvery10Secs = function() {
+		window.setInterval( function() {
+		  punch();
+		}, 5000);
+	}
 	
 </script>
 </body></html>
