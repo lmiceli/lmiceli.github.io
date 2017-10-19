@@ -22,7 +22,7 @@ Esto es una pagina de pago
 
 	function getPunchoutURL(url) {
   		var url = new URL(url);
-		return url.searchParams.get("punchout_url");
+		return url.searchParams.get("ret_url");
 	}
 
 	var punch = function(){
