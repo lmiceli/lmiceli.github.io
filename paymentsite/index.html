@@ -15,7 +15,7 @@ Esto es una pagina de pago
 <br/><br/>
 
 
-<a href="error.lala" onClick="punch(); return false;">este link hace un punchout con get si la url tiene un parametro punchout_url</a>
+<a href="error.lala" onClick="punchEvery5Secs(); return false;">este link hace un punchout con get si la url tiene un parametro punchout_url</a>
 
 <script>
 	console.log("log desde la pagina Main");
@@ -31,7 +31,7 @@ Esto es una pagina de pago
 	}
 
 	
-	var punchEvery10Secs = function() {
+	var punchEvery5Secs = function() {
 		window.setInterval( function() {
 		  punch();
 		}, 5000);
