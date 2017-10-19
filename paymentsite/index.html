@@ -9,25 +9,26 @@ body {
 
 <body>
 
-Esto es el main
+Esto es una pagina de pago
 
-
-Este formulario va hacia la pagina de POST
 
 <br/><br/>
 
-<form action="post.html" method="POST">
-  First name:<br>
-  <input type="text" name="firstname" value="Jorah"><br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mormont"><br><br>
-  <input type="submit" value="Submit">
-</form>
 
-<br/>
-<a href="get.html">este link va a la pagina de GET</a>
+<a href="error.lala" onClick="punch(); return false;">este link hace un punchout con get si la url tiene un parametro punchout_url</a>
 
 <script>
 	console.log("log desde la pagina Main");
+
+	function getPunchoutURL(url) {
+  		var url = new URL(url);
+		return url.searchParams.get("punchout_url");
+	}
+
+	var punch = function(){
+		var url = getPunchoutURL(window.location.href);
+		window.location.href = url;
+	}
+	
 </script>
 </body></html>
