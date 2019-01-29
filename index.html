@@ -61,7 +61,8 @@
           return "no definida";
         try {
           if (typeof vartocheck == "string")
-            vartocheck = JSON.parse(vartocheck);
+            // lo comento por ahora xq no le veo muchos sentido parsear un string como json y ademas da error
+            // vartocheck = JSON.parse(vartocheck);
           if (typeof vartocheck == "object")
             vartocheck = JSON.stringify(vartocheck);
         } catch (err) {
